@@ -10,7 +10,7 @@ let verify=(id,pass,callback)=>{
     if(id.value==""||pass.value==""){
         callback("Kindly fill the form");
     }else if(id.value=="admin"&&pass.value=="12345"){
-        window.location.href="home.html";
+        window.location="home.html";
         callback("credential is correct!!");
 
     }
