@@ -3,8 +3,7 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var data = JSON.parse(this.responseText);
         var tableBody = document.getElementById("data-body");
-        var completedMessage = document.getElementById("completed-message");
-        var completedCount = 0;
+        var Count = 0;
 
         for (var i = 0; i < data.length; i++) {
             var row = tableBody.insertRow(i);
@@ -16,8 +15,8 @@ xhttp.onreadystatechange = function() {
                     checkbox.type = "checkbox";
                     checkbox.addEventListener("change", function() {
                         if (this.checked) {
-                            completedCount++;
-                            if (completedCount >= 5) {
+                            Count++;
+                            if (Count >= 5) {
                                 alert("Congratulation!!!Your's 5 Task are completed.");
                             }
                         }
